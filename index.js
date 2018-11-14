@@ -48,7 +48,7 @@ function handleFiles() {
       //Split emplacement
       var result = splitExp.exec(currentLine.emplacement);
       if (result === null) {
-        console.log(currentLine.emplacement);
+        acc.push(currentLine);
         return acc;
       }
       currentLine.reserve = result[1] || "";
@@ -80,5 +80,7 @@ function handleFiles() {
     }, "<tbody>");
     asHTML += "</tbody>";
     document.getElementById('tableData').innerHTML = asHTML;
+  }).catch(function(error) {
+    alert(JSON.stringify(error));
   });
 }
