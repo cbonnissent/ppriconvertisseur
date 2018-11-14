@@ -4,26 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>PPRI</title>
+    <style>
+        @media print {
+        .noPrint {
+            display:none;
+        }
+    }
+    </style>
 </head>
 <body>
-    <h1>Convertisseur PPRI</h1>
-    <input type="file" id="input"/>
-    <h1>Result</h1>
+    <h1 class="noPrint">Convertisseur PPRI</h1>
+    <input class="noPrint" type="file" id="input"/>
+    <h1 class="noPrint">Result</h1>
     <table cellpadding="2" cellspacing="2" width="100%" align="center">
         <thead>
             <tr>
                 <th>Auteur</th>
                 <th>Titre</th>
-                <th>Date</th>
-                <th>n° inv</th>
-                <th>priorite</th>
-                <th>reserve</th>
-                <th>loc</th>
-                <th>conditionnement</th>
+                <th width="90px">Date</th>
+                <th width="100px">N° inv</th>
+                <th>Priorite</th>
+                <th>Reserve</th>
+                <th>Loc.</th>
+                <th>Conditionnement</th>
                 <!--<th>emplacement usuel</th>-->
-                <th>loc actu</th>
-                <th>statut dépôt actuel</th>
+                <!--<th class="noPrint">Loc actu</th>-->
+                <th>Statut dépôt actuel</th>
+                <th>Pointage</th>
             </tr>
         </thead>
             <tbody id="tableData"></tbody>

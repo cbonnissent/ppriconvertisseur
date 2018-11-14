@@ -72,8 +72,9 @@ function handleFiles() {
         "<td>"+(currentLine["loc"] || "")+"</td>"+
         "<td>"+(currentLine["conditionnement"] || "")+"</td>"+
         //"<td>"+(currentLine["emplacement usuel"] || "")+"</td>"+
-        "<td>"+(currentLine["loc actu"] || "")+"</td>"+
+        //"<td class=\"noPrint\">"+(currentLine["loc actu"] || "")+"</td>"+
         "<td>"+(currentLine["statut dépôt actuel"] || "")+"</td>"+
+        "<td>☐</td>"+
       "</tr>"
       ;
     }, "<tbody>");
