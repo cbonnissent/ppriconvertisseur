@@ -60,6 +60,9 @@ function handleFiles() {
     }, []);
   }).then(function(finalList) {
     var asHTML = finalList.reduce(function(acc, currentLine) {
+      if (!currentLine["conditionnement"]) {
+        return acc;
+      }
       return acc +
       "\n"+
       "<tr>"+
