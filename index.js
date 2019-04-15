@@ -63,6 +63,7 @@ function handleFiles() {
       if (!currentLine["conditionnement"]) {
         return acc;
       }
+      currentLine["conditionnement"] = currentLine["conditionnement"].replace(/\)$/, '');
       return acc +
       "\n"+
       "<tr>"+
