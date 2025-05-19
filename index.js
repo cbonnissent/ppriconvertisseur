@@ -61,8 +61,8 @@ function handleFiles() {
     }, []);
   }).then(function (analyzedArray) {
     return analyzedArray.sort(function (first, second) {
-      var reserveFirst = (first.reserve ? first.reserve.toUpperCase() : "ø")+""+(first.loc ? first.loc.toUpperCase() : "ø");
-      var reserveSecond = (second.reserve ? second.reserve.toUpperCase() : "ø")+""+(second.loc ? second.loc.toUpperCase() : "ø");
+      var reserveFirst = (first.reserve ? first.reserve.toUpperCase() : "ø") + "" + (first.loc ? first.loc.toUpperCase() : "ø");
+      var reserveSecond = (second.reserve ? second.reserve.toUpperCase() : "ø") + "" + (second.loc ? second.loc.toUpperCase() : "ø");
       if (reserveFirst > reserveSecond) {
         return 1;
       }
@@ -83,9 +83,9 @@ function handleFiles() {
         "\n" +
         "<tr>" +
         "<td>" + (currentLine["Auteur(s)"] || "") + "</td>" +
-        "<td>" + (currentLine["Titre"] || "") + "</td>" +
-        "<td>" + (currentLine["Date"] || "") + "</td>" +
-        "<td>" + (currentLine["n° inv."] || "") + "</td>" +
+        "<td>" + (currentLine["Titre principal"] || "") + "</td>" +
+        "<td>" + (currentLine["Date création"] || "") + "</td>" +
+        "<td>" + (currentLine["n° principal (inv. ou dépôt)"] || "") + "</td>" +
         "<td>" + (currentLine["priorite"] || "") + "</td>" +
         "<td>" + (currentLine["reserve"] || "") + "</td>" +
         "<td>" + (currentLine["loc"] || "") + "</td>" +
