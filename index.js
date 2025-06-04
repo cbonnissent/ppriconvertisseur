@@ -83,9 +83,9 @@ function handleFiles() {
         "\n" +
         "<tr>" +
         "<td>" + (currentLine["Auteur(s)"] || "") + "</td>" +
-        "<td>" + (currentLine["Titre principal"] || "") + "</td>" +
-        "<td>" + (currentLine["Date création"] || "") + "</td>" +
-        "<td>" + (currentLine["n° principal (inv. ou dépôt)"] || "") + "</td>" +
+        "<td>" + (currentLine["Titre principal"] || currentLine["Titre"] ||  "") + "</td>" +
+        "<td>" + (currentLine["Date création"] || currentLine["Date"] || "") + "</td>" +
+        "<td>" + (currentLine["n° principal (inv. ou dépôt)"] || currentLine["n° inv."] || "") + "</td>" +
         "<td>" + (currentLine["priorite"] || "") + "</td>" +
         "<td>" + (currentLine["reserve"] || "") + "</td>" +
         "<td>" + (currentLine["loc"] || "") + "</td>" +
